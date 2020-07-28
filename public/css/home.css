@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* NAVBAR START */
+.navbar {
+    background-color: rgba(0,0,0,0.6) !important;
+}
+.navbar .navbar-brand {
+    font-size: 1.4rem;
+}
+
+.navbar.navbar-expand-lg {
+    padding: 0.56rem 6rem 0.56rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .07rem;
+    
+}
+.navbar .collapse .navbar-nav .nav-item {
+    padding-right: 1.5rem;
+}
+.navbar .collapse .navbar-nav .nav-item.active,
+.navbar .collapse .navbar-nav .nav-item:hover {
+    color: #1ebba3 !important;
+}
+.navbar .collapse .navbar-nav .btn {
+    font-size: 0.9rem;
+    border-radius: 0;
+    border-width: 0.1rem;
+    font-weight: 900;
+}
+.navbar .navbar-brand {
+    color: white !important;
+}
+.navbar-nav .nav-item {
+    color: white !important;
+}
+
+/* NAVBAR END */
+/* LANDING SECTION START */
+.landing {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: table;
+    z-index: -1;
+  }
+  .home-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .home-inner {
+    position: fixed;
+    display: table;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    will-change: transform;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/images/cover.jpg);
+  }
+  .caption {
+      position: absolute;
+      width: 100%;
+      top:24%;
+      z-index: 1;
+      color: white;
+      text-shadow: .1rem .1rem .5rem black;
+  }
+  .caption h1 {
+      font-family: 'Allura', cursive;
+      letter-spacing: 0.3rem;
+      font-size: 8rem;
+      font-weight: 700;
+      margin-bottom: 0;
+  }
+  .caption h2 {
+    font-family: 'Allura', cursive;
+    font-size: 4rem;
+  }
+  .caption h4{
+    font-family: "Montserrat",sans-serif;
+  }
+  .caption .btn {
+    border-radius: 0;
+    text-transform: uppercase;
+    border-width: .2rem;
+    font-size: 1.3rem;
+    margin-top: 4.2rem;
+  }
+/* LANDING SECTION END */
+/* RECENT POSTS SECTION START */
+ #recent-posts {
+     margin: 70px auto 0;
+     width: 100%;
+ }
+ #recent-posts h1 {
+     font-family: "Montserrat",sans-serif;
+     font-weight: 700;
+     font-size: 3rem;
+ }
+ #recent-posts hr {
+     width: 16%;
+     border: 2px solid #189582;
+     margin: 1rem auto 1px;
+ }
+ #post-card {
+    background-image: url("https://www.transparenttextures.com/patterns/checkered-pattern.png");
+ }
+ /* ASKING USER */
+ .asking-user {
+     font-weight: 900;
+     font-family: "Montserrat",sans-serif;
+     font-size: 2.5rem;
+     width: 100%;
+ }
+ .asking-user h2 {
+     font-size: 2rem;
+     padding-top: 20px;
+ }
+ .asking-user .btn {
+    background-color: #1ebba3;
+    border-color: #1ebba3;
+    font-size: 1.2rem;
+    border-radius: 0;
+    font-weight: 700;
+    padding: 0.9rem 1.2rem;
+    color: white;
+    margin: 3rem 0 3rem;
+ }
+ .asking-user .btn:hover {
+     color: white !important;
+     background-color: #189582 !important;
+ }
+ /* FOOTER */
+ #footer {
+    background-color: #40474e;
+    color: white;
+    padding: 2rem 1rem 0.2rem;
+    margin-top: 1rem;
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    margin-top: auto;
+}
+#footer h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 2rem;
+}
+#footer .des {
+    font-size: 1rem;
+    margin-top: 0.8rem;
+}
+#footer h3 {
+    font-size: 1.3rem;
+    margin-top: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+#footer .email,.tel {
+    margin-top: 0.3rem;
+}
+#footer .fab {
+    font-size: 1.6rem;
+    margin: 1.2rem 0.5rem 0 0;
+    padding: 0 0.3rem;
+}
+#footer .fab:hover {
+    color: #1ebba3!important;
+}
+#footer hr {
+    margin: 2rem 0 0.8rem;
+    border: 1px solid gray;
+}
+
+@media (max-width: 767px) {
+    .navbar .navbar-brand {
+        font-size: 1rem;
+    }
+    .navbar.navbar-expand-lg {
+        padding: 0.56rem 0 0.56rem 1rem;  
+    }
+    .navbar .navbar-toggler {
+        margin-right: 20px;
+    }
+    .caption {
+        top:30%;
+    }
+    .caption h1 {
+        font-size: 5.2rem;
+    }
+    .caption h2 {
+      font-family: 'Allura', cursive;
+      font-size: 2.6rem;
+    }
+    .caption .btn {
+      font-size: 1rem;
+    }
+    .asking-user h1 {
+        font-size: 2.3rem;
+    }
+    .asking-user h2 {
+        font-size: 1.5rem;
+    }
+    .asking-user .btn {
+        font-size: 1rem;
+    }
+    #dashboard {
+        display: flex;
+        justify-content: center !important;
+        align-items: center;
+        margin: 90px 0 30px !important;
+        width: 100%;
+        
+    }
+    #post-button a {
+        font-size: 1rem !important;
+    }
+    #no-posts {
+        font-size: 1.6rem !important;
+    }
+    #content-showPost .para {
+        font-size: 1.2rem !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    #wrap-showPost {
+        border-radius: 0 !important;
+    }
+    #content-showPost {
+        margin: 50px 13px 20px !important;
+    }
+    #content-showPost h1 {
+        padding: 0 10px 40px !important;
+    }
+}
+
+#dashboard {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 110px;
+    width: 100%;
+}
+#dashboard-post {
+    
+    margin: 0 auto 0 !important;
+    width: 100%;
+}
+#dashboard-post h1 {
+    font-family: "Montserrat",sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+}
+#dashboard-post hr {
+    width: 16%;
+    border: 2px solid #189582;
+    margin: 1rem auto 1px;
+}
+#recent-posts.articles-posts {
+    margin-top: 120px;
+}
+a.btn {
+    margin: 0 13px;
+    padding: 10px 15px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+#edit-delete .btn{
+    font-size: 0.9rem !important;
+    font-weight: 400 !important;
+    font-family: 'Lato', sans-serif !important;
+    padding: 7px 14px;
+    margin-top: 30px;
+}
+#date-span {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    font-size: 1rem !important;
+
+}
+#no-posts {
+    font-family: "Montserrat",sans-serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 35px auto;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+#main-showPost {
+    margin-top: 30px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 30px;
+}
+#wrap-showPost {
+    background-image: url("https://www.transparenttextures.com/patterns/checkered-pattern.png");
+    min-height:85vh !important;
+    width: 90vw;
+    border-radius: 3%;
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat",sans-serif;
+}
+#content-showPost {
+    margin: 90px 40px 30px;
+}
+#content-showPost h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    padding: 0 10px 67px;
+}
+#content-showPost .para {
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 0 10px 65px;
+}
+#name-date {
+    display: flex;
+    flex-direction: column;
+    min-height: 150px;
+}
+#name-date .name {
+    margin-top: auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+#alert {
+    margin: 150px 40px 150px;
+}
+
+

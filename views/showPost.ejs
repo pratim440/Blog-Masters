@@ -1,0 +1,16 @@
+<%- include("partials/home-header") -%>
+
+<div id="main-showPost">
+    <div id="wrap-showPost">
+        <div id="content-showPost">
+            <h1 class="text-center"> <%= post.title %> </h1>
+            <p class="para"> <%= post.description %> </p>
+            <div id="name-date" class="text-center">
+                <p class="name"> <%= post.name %> </p>
+                <p class="date"> <%= post.date.toLocaleDateString() %> </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include("partials/home-footer") -%>

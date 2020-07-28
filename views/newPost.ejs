@@ -1,0 +1,25 @@
+<%- include("partials/form-header") -%>
+
+<div id="addNew">
+<div id="wrap">
+  <div class="wrapper container">
+    
+    <form action="/newPost/<%=email%>" method="POST">
+      
+      <div class="group">
+        <input name="postTitle" autocomplete="off" type="text" required="required"/><span class="highlight"></span><span class="bar"></span>
+        <label>Title</label>
+      </div>
+      <div class="group">
+        <textarea name=postDescription type="textarea" rows="5" required="required"></textarea><span class="highlight"></span><span class="bar"></span>
+        <label>Description</label>
+      </div>
+      <div class="btn-box">
+        <button id="post-button" class="btn btn-submit" type="submit">Post</button>
+        <a href="/dashboard" id="back-button" class="btn btn-cancel">Back</a>
+      </div>
+    </form>
+
+
+<%- include("partials/form-footer") -%>
+

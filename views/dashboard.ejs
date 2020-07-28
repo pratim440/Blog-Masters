@@ -1,0 +1,57 @@
+<%- include("partials/home-header") -%>
+
+<div id="dashboard">
+<div id="post-button">
+    <a href="/newPost/<%= email %>" class="btn btn-success">NEW POST</a>
+    <a href="/logout" class="btn btn-info">LOG OUT</a>
+</div>
+</div>
+<div id="dashboard-post" class="container-fluid">
+    <h1 class="post-heading text-center">My Posts</h1>
+    <hr>
+</div>
+
+<!-- REPLACE WITH EJS -->
+<%if((posts===undefined)|| (posts.length === 0)){ %>
+  <h1 id="no-posts" class="text-center">You don't have any blog posts yet. Create your first blog today</h1>
+  <%} else { %>
+<section class="text-gray-700 body-font"></section>
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -m-4">
+      <% for(let i=posts.length-1; i>=0; i--) { %>
+
+
+
+      <div class="p-4 lg:w-1/3">
+        <div id="post-card" class="h-full bg-gray-200 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+          <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3"><%= posts[i].title %></h1>
+          <p class="leading-relaxed mb-3"><%= posts[i].description.substring(0,100) %></p>
+          <a class="text-indigo-500 inline-flex items-center" href="/showPost/<%= posts[i]._id %>">Read More
+            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+            <span id="date-span" class="text-gray-600 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-300">
+              By: <%= posts[i].name %> <br> <%= posts[i].date.toLocaleDateString() %>
+            </span>
+            
+          </div><br>
+          <form action="/delete/<%= posts[i]._id %>?_method=DELETE" method="post">
+          <div id="edit-delete">
+            <a href="/editPost/<%= posts[i]._id %>" class="btn btn-info">EDIT<i class="fas fa-edit"></i></a>
+            <button class="btn btn-danger" type="submit">DELETE<i class="fas fa-trash-alt"></i></button>
+
+          </div>
+        </form>
+        </div>
+        
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+<% } %>
+
+<%- include("partials/home-footer") -%>

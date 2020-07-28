@@ -9,15 +9,15 @@
 <%if((posts===undefined)|| (posts.length === 0)){ %>
   <h1 id="no-posts">No blog posts available</h1>
 <%} else { %>
-<section class="text-gray-700 body-font"></section>
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-wrap -m-4">
+  <section class="text-gray-700 body-font"></section>
+  <div class="container text-center px-1 py-24 mx-auto">
+    <div class="flex flex-wrap -m-0">
       <% for(let i=posts.length-1; i>=0; i--) { %>
 
 
 
-      <div class="p-4 lg:w-1/3">
-        <div id="post-card" class="h-full bg-gray-200 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+      <div class="p-3 lg:w-1/3">
+        <div id="post-card" class="h-full bg-gray-200 px-2 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
           <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3"><%= posts[i].title %></h1>
           <p class="leading-relaxed mb-3"><%= posts[i].description.substring(0,100) %></p>
           <a class="text-indigo-500 inline-flex items-center" href="/showPost/<%= posts[i]._id %>">Read More

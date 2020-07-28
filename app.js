@@ -171,8 +171,8 @@ app.get("/logout", (req,res) => {
     res.redirect("/");
 });
 
-app.get("/alert", (req,res) => {
-    res.render("alert");
+app.get("/alert-register", (req,res) => {
+    res.render("alert-register");
 });
 
 
@@ -186,7 +186,6 @@ app.post("/register", function(req,res){
     Post.register({username: req.body.username}, req.body.password, function(err, user){
         if(err) {
             console.log(err);
-            res.redirect("/alert");
         }
         else {
             passport.authenticate("local")(req, res, function(){
@@ -208,15 +207,14 @@ app.post("/login", function(req, res){
     req.login(user, function(err){
         if(err) {
             console.log(err);
+            res.redirect("/alert-login");
             
         } else {
             passport.authenticate("local")(req, res, function(){
                 
                 res.redirect("/dashboard");
-                
-                
-            });
-        }
+             });
+  }
     });
 
 });

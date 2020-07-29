@@ -104,11 +104,9 @@ app.get("/allArticles", (req,res) => {
 
 });
 
-
 app.get("/dashboard", (req,res) => {
-    
     if(req.isAuthenticated()){
-        
+
         Post.find({email: req.user.username, name:{$ne:null}}, function(err,user){
 
             Post.find({username: req.user.username, title:{$ne:null}}, function(err,posts){
@@ -207,7 +205,6 @@ app.post("/login", function(req, res){
     req.login(user, function(err){
         if(err) {
             console.log(err);
-            res.redirect("/alert-login");
             
         } else {
             passport.authenticate("local")(req, res, function(){

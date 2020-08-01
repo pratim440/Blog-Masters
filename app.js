@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -16,7 +15,7 @@ app.use(methodOverride('_method'));
 app.use(express.static("public"));
 
 app.use(session({
-    secret: process.env.SECRET,
+    secret: "Our little secret.",
     resave: false, 
     saveUninitialized: false
 
@@ -25,7 +24,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect(process.env.MONGO_URL + "/blogMastersDB", {
+mongoose.connect("mongodb+srv://admin-pratim:potlac440@cluster0-3lhou.mongodb.net/blogMastersDB", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,

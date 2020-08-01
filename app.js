@@ -24,7 +24,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://admin-pratim:potlac440@cluster0-3lhou.mongodb.net/blogMastersDB", {
+mongoose.connect(MONGO_URL + "/blogMastersDB", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
